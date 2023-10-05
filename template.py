@@ -24,7 +24,7 @@ list_of_files = [
     "requirements.txt",
     "requirements_dev.txt",
     "setup.py",
-    "setup.cgf",
+    "setup.cfg",
     "pyprojects.toml",
     "tox.ini",
     "research/trials.ipynb"
@@ -33,7 +33,7 @@ list_of_files = [
 for filepath in list_of_files:
     filepath = Path(filepath) #removes conflict and converts according to the terminal
     filedir, filename = os.path.split(filepath)
-    
+
     if filedir != "":
         os.makedirs(filedir, exist_ok = True)
         logging.info(f"creating directory: {filedir} for file: {filename}")
